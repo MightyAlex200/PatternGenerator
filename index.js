@@ -52,7 +52,6 @@ function draw() {
     for (const point of points) {
         const scaledPoint = scalePoint(point);
         for (const lineFolder of lineFolders) {
-            console.log(lineFolder);
             const folderPoint = scalePoint(points[(points.indexOf(point) + lineFolder.options.offset) % points.length]);
             line(scaledPoint.x, scaledPoint.y, folderPoint.x, folderPoint.y);
         }
